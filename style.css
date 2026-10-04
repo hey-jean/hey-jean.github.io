@@ -8,6 +8,13 @@ body {
   background: #fff;
   color: #202124;
 }
+.topbar { position: absolute; top: 16px; left: 24px; }
+.school {
+  display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 8px;
+  color: #5f6368; text-decoration: none; font-size: 15px;
+}
+.school b { color: #1a73e8; font-size: 19px; letter-spacing: -.5px; }
+.school:hover { background: #f1f3f4; color: #202124; }
 .container {
   flex: 1;
   width: 100%;
