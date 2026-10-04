@@ -29,7 +29,7 @@ async function fetchWeather(city) {
     card.querySelector('.desc').textContent = desc;
   } catch (e) {
     card.querySelector('.icon').textContent = '⚠️';
-    card.querySelector('.desc').textContent = '날씨를 불러오지 못했어요';
+    card.querySelector('.desc').textContent = '불러오기 실패';
   }
 }
 CITIES.forEach(fetchWeather);
@@ -56,3 +56,9 @@ function showQuote(first) {
 }
 document.getElementById('next-quote').addEventListener('click', () => showQuote(false));
 showQuote(true);
+
+// I'm Feeling Lucky: 첫 번째 검색 결과로 바로 이동
+document.getElementById('lucky').addEventListener('click', () => {
+  const q = document.getElementById('q').value.trim();
+  location.href = q ? 'https://www.google.com/search?btnI=1&q=' + encodeURIComponent(q) : 'https://www.google.com/doodles';
+});
