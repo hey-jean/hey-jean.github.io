@@ -46,12 +46,13 @@ const QUOTES = [
   ['시작이 반이다.', '아리스토텔레스']
 ];
 let last = -1;
-function showQuote() {
+function showQuote(first) {
   let i;
-  do { i = Math.floor(Math.random() * QUOTES.length); } while (i === last);
+  if (first) i = 5; // 처음에는 항상 같은 명언("아는 것이 힘이다.")
+  else do { i = Math.floor(Math.random() * QUOTES.length); } while (i === last);
   last = i;
   document.getElementById('quote-text').textContent = `“${QUOTES[i][0]}”`;
   document.getElementById('quote-author').textContent = `— ${QUOTES[i][1]}`;
 }
-document.getElementById('next-quote').addEventListener('click', showQuote);
-showQuote();
+document.getElementById('next-quote').addEventListener('click', () => showQuote(false));
+showQuote(true);
