@@ -61,8 +61,9 @@ body {
 }
 .buttons button:hover { border-color: #dadce0; box-shadow: 0 1px 1px rgba(0,0,0,.1); }
 footer { background: #f2f2f2; text-align: center; padding: 18px 20px 20px; }
-#quote-text { font-size: 16px; margin: 0 0 4px; }
-#quote-author { color: #5f6368; font-size: 14px; margin: 0 0 10px; }
+.quote-line { margin: 0 0 10px; line-height: 1.6; }
+#quote-text { font-size: 16px; }
+#quote-author { color: #5f6368; font-size: 14px; margin-left: 6px; white-space: nowrap; }
 #next-quote {
   border: 1px solid #dadce0; background: #fff; border-radius: 4px;
   padding: 6px 14px; font-size: 13px; color: #3c4043; cursor: pointer;
